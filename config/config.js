@@ -64,11 +64,11 @@
 				symbol: "flower",
 				url: "https://calendar.google.com/calendar/ical/ac40cikivmgug6mdb8lmf4m3tk@group.calendar.google.com/basic.ics"
 			},
-			{
-				symbol: "facebook",
-				color: "#3b5998",
-				url: "https://outlook.office365.com/owa/calendar/b974be8f6e6d4e56bdea5191d032c1c1@fb.com/e4239f2d341441ba957e29a9952d8af912834209555042456892/calendar.ics"
-			}
+			// {
+			// 	symbol: "facebook",
+			// 	color: "#3b5998",
+			// 	url: "https://outlook.office365.com/owa/calendar/b974be8f6e6d4e56bdea5191d032c1c1@fb.com/e4239f2d341441ba957e29a9952d8af912834209555042456892/calendar.ics"
+			// }
 			]
 		}
 	},
