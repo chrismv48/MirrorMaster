@@ -38,7 +38,7 @@
 	//   starts serveronly and then starts chrome browser
 	// false, default for all NON-armv6l devices
 	// true, force serveronly mode, because you want to.. no UI on this device
-
+	// possible positions: top_bar, top_left, top_center, top_right, upper_third, middle_center, lower_third, bottom_left, bottom_center, bottom_right, bottom_bar, fullscreen_above, and fullscreen_below
 	modules: [
 	{
 		module: "alert",
@@ -86,10 +86,15 @@
 			{
 				title: "New York Times",
 				url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-			}
+			},
+			{
+				title: "BBC",
+				url: "http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=uk",
+			},
 			],
 			showSourceTitle: true,
 			showPublishDate: true,
+			showDescription: true,
 			broadcastNewsFeeds: true,
 			broadcastNewsUpdates: true
 		}
@@ -109,17 +114,41 @@
 		}
 	},
 	{
-  module: "MMM-NowPlayingOnSpotify",
-  position: "top_center",
+		module: "MMM-NowPlayingOnSpotify",
+		position: "top_center",
 
-  config: {
-    clientID: "177ce93d552e463aa25c505469f0e2b9",
-    clientSecret: "8fc419bdbc3a43a8be1627088d27a72c",
-    accessToken: "BQC_vsw6OZ-FKQZ8SiQhoW46Zv7MLvcFSxo5FtSCxxsy8XcEM6hQjFD_0FQiCPei5lDm_-AZY-ASr3iDbthn42Ig6fgT2Qcja51wL1ZFzFx5VwJbRwNh8R7xso66iw7ZfFoVDJoH2bjKSh50L2FieQL8gw",
-    refreshToken: "AQA6cpJHF7pa72yrpu8q2PNjILJz7hzzCKvgBJTY9K-YKnQmK7zUkP9wKlAyzhA1_9DpKqsBXU_hmvClQHDnIYMhq3JrgOaim936Q4uS3OZQ-H7vobPX3RSzDIBN-FNUu_A"
-  }
+		config: {
+			clientID: "177ce93d552e463aa25c505469f0e2b9",
+			clientSecret: "8fc419bdbc3a43a8be1627088d27a72c",
+			accessToken: "BQC_vsw6OZ-FKQZ8SiQhoW46Zv7MLvcFSxo5FtSCxxsy8XcEM6hQjFD_0FQiCPei5lDm_-AZY-ASr3iDbthn42Ig6fgT2Qcja51wL1ZFzFx5VwJbRwNh8R7xso66iw7ZfFoVDJoH2bjKSh50L2FieQL8gw",
+			refreshToken: "AQA6cpJHF7pa72yrpu8q2PNjILJz7hzzCKvgBJTY9K-YKnQmK7zUkP9wKlAyzhA1_9DpKqsBXU_hmvClQHDnIYMhq3JrgOaim936Q4uS3OZQ-H7vobPX3RSzDIBN-FNUu_A"
+		}
+	},
+	// {
+	// 	module: "MMM-GooglePhotos",
+	// 	position: "middle_center",
+	// 	config: {
+	// 	albums: ["Best of Japan"], // Set your album name. like ["My wedding", "family share", "Travle to Paris"]
+	// 	updateInterval: 1000 * 60, // minimum 10 seconds.
+	// 	sort: "random", // "old", "random"
+	// 	uploadAlbum: null, // Only album created by `create_uploadable_album.js`.
+	// 	condition: {
+	// 		fromDate: null, // Or "2018-03", RFC ... format available
+	// 		toDate: null, // Or "2019-12-25",
+	// 		minWidth: null, // Or 400
+	// 		maxWidth: null, // Or 8000
+	// 		minHeight: null, // Or 400
+	// 		maxHeight: null, // Or 8000
+	// 		minWHRatio: null,
+	// 		maxWHRatio: null,
+	// 		// WHRatio = Width/Height ratio ( ==1 : Squared Photo,   < 1 : Portraited Photo, > 1 : Landscaped Photo)
+	// 	},
+	// 	showWidth: 1080, // These values will be used for quality of downloaded photos to show. real size to show in your MagicMirror region is recommended.
+	// 	showHeight: 1920,
+	// 	timeFormat: "YYYY/MM/DD HH:mm", // Or `relative` can be used.
+	// }
 },
-	]
+]
 };
 
 /*************** DO NOT EDIT THE LINE BELOW ***************/
