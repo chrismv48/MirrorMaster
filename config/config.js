@@ -55,14 +55,16 @@
 		module: "calendar",
 		header: "Up Next",
 		position: "top_left",
+		maximumEntries: 7,
+		maximumNumberOfDays: 14,
 		config: {
 			calendars: [
 			{
 				url: "https://calendar.google.com/calendar/ical/chris.r.armstrong%40gmail.com/private-00bfcc38df412610c96e7685f031bd69/basic.ics"
 			},
 			{
-				symbol: "flower",
-				url: "https://calendar.google.com/calendar/ical/ac40cikivmgug6mdb8lmf4m3tk@group.calendar.google.com/basic.ics"
+				symbol: "heart",
+				url: "https://calendar.google.com/calendar/ical/ac40cikivmgug6mdb8lmf4m3tk%40group.calendar.google.com/private-0348d12ebf539733833a87f4c9b60e44/basic.ics"
 			},
 			// {
 			// 	symbol: "facebook",
@@ -93,20 +95,30 @@
 		}
 	},
 	{
-		module: "MMM-DarkSkyForecast",
-		header: "",
+		module: "weather",
 		position: "top_right",
-		classes: "default everyone",
-		disabled: false,
 		config: {
-			apikey: "da9a7c5edf081ac9756a97fdd71c4c32",
-			latitude: "40.7437312",
-			longitude: "-73.957376",
-			iconset: "4c",
-			concise: false,
-			forecastLayout: "table"
+			weatherProvider: "openweathermap",
+			weatherEndpoint: "/forecast",
+			type: "forecast",
+			units: "imperial",
+			apiKey: "da9a7c5edf081ac9756a97fdd71c4c32",
+			locationID: 5128581,
+			roundTemp: true,
+			colored: true,
 		}
 	},
+	{
+  module: "MMM-NowPlayingOnSpotify",
+  position: "top_center",
+
+  config: {
+    clientID: "177ce93d552e463aa25c505469f0e2b9",
+    clientSecret: "8fc419bdbc3a43a8be1627088d27a72c",
+    accessToken: "BQC_vsw6OZ-FKQZ8SiQhoW46Zv7MLvcFSxo5FtSCxxsy8XcEM6hQjFD_0FQiCPei5lDm_-AZY-ASr3iDbthn42Ig6fgT2Qcja51wL1ZFzFx5VwJbRwNh8R7xso66iw7ZfFoVDJoH2bjKSh50L2FieQL8gw",
+    refreshToken: "AQA6cpJHF7pa72yrpu8q2PNjILJz7hzzCKvgBJTY9K-YKnQmK7zUkP9wKlAyzhA1_9DpKqsBXU_hmvClQHDnIYMhq3JrgOaim936Q4uS3OZQ-H7vobPX3RSzDIBN-FNUu_A"
+  }
+},
 	]
 };
 
