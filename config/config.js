@@ -143,7 +143,8 @@
 			module: "MMM-Wallpaper",
 			position: "fullscreen_below",
 			config: { // See "Configuration options" for more information.
-			  source: "/r/Amoledbackgrounds",
+			//   source: "/r/Amoledbackgrounds",
+			  source: "local:~/Projects/MirrorMaster/modules/MMM-Wallpaper/wallpapers",
 			  slideInterval: 60 * 1000 // Change slides every minute
 			}
 		  }
